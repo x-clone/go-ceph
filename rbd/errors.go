@@ -65,7 +65,7 @@ var (
 	// name and it is not provided.
 	ErrNoNamespaceName = errors.New("Namespace value is missing")
 
-	// revive:disable:exported for compatibility with old versions
+	// revive:disable
 	RbdErrorImageNotOpen = ErrImageNotOpen
 	RbdErrorNotFound     = ErrNotFound
 	// revive:enable:exported
