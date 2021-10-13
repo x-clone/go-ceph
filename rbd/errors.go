@@ -67,7 +67,7 @@ var (
 
 	ErrUndocumented = errors.New("Undocumented error")
 
-	// revive:disable:exported for compatibility with old versions
+	// revive:disable
 	RbdErrorImageNotOpen = ErrImageNotOpen
 	RbdErrorNotFound     = ErrNotFound
 	// revive:enable:exported
