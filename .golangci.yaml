@@ -89,7 +89,7 @@ linters-settings:
     confidence: 0.8
     error-code: 1
     warning-code: 0
-    enable-all-rules: true
+    #enable-all-rules: true
     directives:
       - name: "specify-disable-reason"
     rules:
