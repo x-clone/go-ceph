@@ -1,7 +1,7 @@
 package admin
 
 import (
-	"github.com/ceph/go-ceph/internal/commands"
+	"github.com/x-clone/go-ceph/internal/commands"
 )
 
 var (

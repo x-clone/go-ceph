@@ -22,7 +22,7 @@ import "C"
 import (
 	"unsafe"
 
-	"github.com/ceph/go-ceph/internal/callbacks"
+	"github.com/x-clone/go-ceph/internal/callbacks"
 )
 
 var diffIterateCallbacks = callbacks.New()

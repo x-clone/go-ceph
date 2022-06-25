@@ -17,9 +17,9 @@ import (
 	"fmt"
 	"unsafe"
 
-	"github.com/ceph/go-ceph/internal/cutil"
-	"github.com/ceph/go-ceph/internal/retry"
-	"github.com/ceph/go-ceph/rados"
+	"github.com/x-clone/go-ceph/internal/cutil"
+	"github.com/x-clone/go-ceph/internal/retry"
+	"github.com/x-clone/go-ceph/rados"
 )
 
 // MirrorMode is used to indicate an approach used for RBD mirroring.

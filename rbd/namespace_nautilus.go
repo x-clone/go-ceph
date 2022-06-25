@@ -14,9 +14,9 @@ import "C"
 import (
 	"unsafe"
 
-	"github.com/ceph/go-ceph/internal/cutil"
-	"github.com/ceph/go-ceph/internal/retry"
-	"github.com/ceph/go-ceph/rados"
+	"github.com/x-clone/go-ceph/internal/cutil"
+	"github.com/x-clone/go-ceph/internal/retry"
+	"github.com/x-clone/go-ceph/rados"
 )
 
 // NamespaceCreate creates the namespace for a given Rados IOContext.

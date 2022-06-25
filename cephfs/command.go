@@ -11,7 +11,7 @@ import "C"
 import (
 	"unsafe"
 
-	"github.com/ceph/go-ceph/internal/cutil"
+	"github.com/x-clone/go-ceph/internal/cutil"
 )
 
 func cephBufferFree(p unsafe.Pointer) {
