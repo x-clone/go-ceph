@@ -32,7 +32,7 @@ func (api *API) SetIndividualBucketQuota(ctx context.Context, quota IndividualBu
 		return errMissingBucket
 	}
 
-	_, err := api.call(ctx, http.MethodPut, "/bucket?quota", valueToURLParams(quota, []string{"quota"}))
+	_, err := api.call(ctx, http.MethodPut, "/bucket?quota", valueToURLParams(quota, []string{"quota", "uid", "bucket"}))
 	if err != nil {
 		return err
 	}
