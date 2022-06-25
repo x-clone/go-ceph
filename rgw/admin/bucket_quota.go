@@ -1,6 +1,3 @@
-//go:build ceph_preview
-// +build ceph_preview
-
 package admin
 
 import (
@@ -35,7 +32,7 @@ func (api *API) SetIndividualBucketQuota(ctx context.Context, quota IndividualBu
 		return errMissingBucket
 	}
 
-	_, err := api.call(ctx, http.MethodPut, "/bucket?quota", valueToURLParams(quota))
+	_, err := api.call(ctx, http.MethodPut, "/bucket?quota", valueToURLParams(quota, []string{"quota"}))
 	if err != nil {
 		return err
 	}

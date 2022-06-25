@@ -1,6 +1,3 @@
-//go:build ceph_preview
-// +build ceph_preview
-
 package admin
 
 import (
@@ -29,7 +26,7 @@ func (api *API) CreateKey(ctx context.Context, key KeySpec) (*[]UserKeySpec, err
 		return nil, errMissingUserID
 	}
 
-	body, err := api.call(ctx, http.MethodPut, "/user?key", valueToURLParams(key))
+	body, err := api.call(ctx, http.MethodPut, "/user?key", valueToURLParams(key, []string{"key"}))
 	if err != nil {
 		return nil, err
 	}
@@ -55,7 +52,7 @@ func (api *API) RemoveKey(ctx context.Context, key KeySpec) error {
 		return errMissingUserAccessKey
 	}
 
-	_, err := api.call(ctx, http.MethodDelete, "/user?key", valueToURLParams(key))
+	_, err := api.call(ctx, http.MethodDelete, "/user?key", valueToURLParams(key, []string{"key"}))
 	if err != nil {
 		return err
 	}

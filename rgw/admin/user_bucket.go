@@ -1,6 +1,3 @@
-//go:build ceph_preview
-// +build ceph_preview
-
 package admin
 
 import (
@@ -29,7 +26,7 @@ func (api *API) ListUsersBuckets(ctx context.Context, uid string) ([]string, err
 		GenerateStat: &generateStat,
 	}
 
-	body, err := api.call(ctx, http.MethodGet, "/bucket", valueToURLParams(listingSpec))
+	body, err := api.call(ctx, http.MethodGet, "/bucket", valueToURLParams(listingSpec, []string{"uid"}))
 	if err != nil {
 		return nil, err
 	}
@@ -56,7 +53,7 @@ func (api *API) ListUsersBucketsWithStat(ctx context.Context, uid string) ([]Buc
 		GenerateStat: &generateStat,
 	}
 
-	body, err := api.call(ctx, http.MethodGet, "/bucket", valueToURLParams(listingSpec))
+	body, err := api.call(ctx, http.MethodGet, "/bucket", valueToURLParams(listingSpec, []string{"uid"}))
 	if err != nil {
 		return nil, err
 	}
