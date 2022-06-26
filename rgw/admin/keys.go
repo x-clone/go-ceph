@@ -26,7 +26,7 @@ func (api *API) CreateKey(ctx context.Context, key KeySpec) (*[]UserKeySpec, err
 		return nil, errMissingUserID
 	}
 
-	body, err := api.call(ctx, http.MethodPut, "/user?key", valueToURLParams(key, []string{"key"}))
+	body, err := api.call(ctx, http.MethodPut, "/user?key", valueToURLParams(key, []string{"uid", "subuser", "key-type", "access-key", "secret-key", "generate-key"}))
 	if err != nil {
 		return nil, err
 	}

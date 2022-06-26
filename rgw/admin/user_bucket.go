@@ -26,7 +26,7 @@ func (api *API) ListUsersBuckets(ctx context.Context, uid string) ([]string, err
 		GenerateStat: &generateStat,
 	}
 
-	body, err := api.call(ctx, http.MethodGet, "/bucket", valueToURLParams(listingSpec, []string{"uid"}))
+	body, err := api.call(ctx, http.MethodGet, "/bucket", valueToURLParams(listingSpec, []string{"uid", "stats"}))
 	if err != nil {
 		return nil, err
 	}
